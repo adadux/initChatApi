@@ -2,7 +2,7 @@
 	"watch": [
 	  "src"
 	],
-	"ext": "js,json",
+	"ext": "js,cjs,mjs,json",
 	"ignore": [
 	  "src/**/*.spec.js"
 	],
