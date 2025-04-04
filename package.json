@@ -1,0 +1,32 @@
+{
+  "name": "initchatapi",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon",
+    "serve": "node src/index.js",
+    "format": "npx prettier --write \"./src/**/*.{js,json}\"",
+    "lint": "eslint \"./src/**/*.{js,json}\"",
+    "lint:fix": "eslint \"./src/**/*.{js,json}\" --fix"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "pg": "^8.14.1",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.9"
+  }
+}
