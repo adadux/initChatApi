@@ -23,16 +23,16 @@ type User {
 }
 
 type Role {
-    roleId: ID
-    roleName: String
-    description?: String
-    permissions: [Permission]
+  roleId: ID
+  roleName: String
+  description?: String
+  permissions: [Permission]
 }
 
 type Permission {
-    permissionId: ID
-    permissionName: String
-    description?: String
+  permissionId: ID
+  permissionName: String
+  description?: String
 }
 
 type Message {
