@@ -11,62 +11,90 @@
 
 ```
 type User {
-  _id: ID
-  createdAt: String
-  lastModified: String
+  userId: ID
+  createdAt: Date
+  updatedAt: Date
   login: String
-  nick: String
-  acl: [String]
-  avatar: Media
-  chats: [Chat]
+  userRoles: [Role]
+  passwordHash: String
+  nickName?: String
+  avatar?: Media
+  chats?: [Chat]
+}
+
+type Role {
+    roleId: ID
+    roleName: String
+    description?: String
+    permissions: [Permission]
+}
+
+type Permission {
+    permissionId: ID
+    permissionName: String
+    description?: String
 }
 
 type Message {
-  _id: ID
-  createdAt: String
-  lastModified: String
+  messageId: ID
+  createdAt: Date
+  updatedAt: Date
+  createdBy: User
+  updatedBy: User
   owner: User
   chat: Chat
-  text: String
-  media: [Media]
-  replies: [Message]
-  replyTo: Message
-  forwarded: Message
-  forwardWith: [Message]
+  text?: String
+  media?: [Media]
+  replies?: [Message]
+  replyTo?: Message
+  forwarded?: Message
+  forwardWith?: [Message]
+}
+
+type ChatType {
+  chatTypeId: ID
+  chatTypeName: String
 }
 
 type Chat {
-  _id: ID
-  createdAt: String
-  lastModified: String
-  type: private | public
+  chatId: ID
+  createdAt: Date
+  updatedAt: Date
+  createdBy: User
+  updatedBy: User
+  type: ChatType
   owner: User
   title: String
   members: [User]
-  messages: [Message]
-  categories: [ChatCategory]
-  avatar: Media
+  messages?: [Message]
+  categories?: [ChatCategory]
+  avatar?: Media
 }
 
 type ChatCategory {
-  _id: ID
-  createdAt: String
-  lastModified: String
+  chatCategoryId: ID
+  createdAt: Date
+  updatedAt: Date
+  createdBy: User
+  updatedBy: User
   title: String
-  chats: [Chat]
+  description?: String
+  chats?: [Chat]
 }
 
 type Media {
-  _id: ID,
-  createdAt: String
-  lastModified: String
+  mediaId: ID,
+  createdAt: Date
+  updatedAt: Date
+  createdBy: User
+  updatedBy: User
   owner: User
-  text: String,
+  text?: String,
   url: String,
-  originalFileName: String,
-  type: String
-  userAvatar: User
-  chatAvatars: [Chat]
-  messages: [Message]
+  fileName: String,
+  fileType: String
+  userAvatar?: User
+  chatAvatars?: [Chat]
+  messages?: [Message]
 }
 ```
