@@ -1,0 +1,20 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"baseUrl": ".",
+		"allowJs": true,
+		"noEmit": true,
+		"preserveWatchOutput": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"sourceMap": false,
+		"resolveJsonModule": true
+	},
+	"include": ["*", "**/*"],
+	"exclude": ["node_modules"]
+}

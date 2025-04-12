@@ -1,35 +1,49 @@
 {
-  "name": "initchatapi",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "type": "module",
-  "scripts": {
-    "start": "nodemon",
-    "serve": "node src/index.js",
-    "format": "npx prettier --write \"./src/**/*.{js,cjs,mjs,json}\"",
-    "lint": "eslint \"./src/**/*.{js,cjs,mjs,json}\"",
-    "lint:fix": "eslint \"./src/**/*.{js,cjs,mjs,json}\" --fix"
-  },
-  "author": "",
-  "license": "MIT",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "pg": "^8.14.1",
-    "ws": "^8.18.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.24.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^9.24.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.6",
-    "globals": "^16.0.0",
-    "nodemon": "^3.1.9",
-    "prettier": "^3.5.3"
-  },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.9"
-  },
-  "private": true
+	"name": "initchatapi",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/index.js",
+	"type": "module",
+	"private": true,
+	"author": "",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/.git"
+	},
+	"bugs": {
+		"url": "https://github.com/issues"
+	},
+	"homepage": "https://github.com/#readme",
+	"scripts": {
+		"start": "nodemon",
+		"serve": "node src/index.js",
+		"format": "npx prettier --write \"./src/**/*.{js,cjs,mjs,json,ts}\"",
+		"lint": "eslint \"./src/**/*.{js,cjs,mjs,json,ts}\"",
+		"lint:fix": "eslint \"./src/**/*.{js,cjs,mjs,json,ts}\" --fix"
+	},
+	"dependencies": {
+		"pg": "^8.14.1",
+		"ws": "^8.18.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.24.0",
+		"@eslint/json": "^0.11.0",
+		"@types/node": "^22.14.1",
+		"@types/pg": "^8.11.12",
+		"@types/ws": "^8.18.1",
+		"@typescript-eslint/eslint-plugin": "^8.29.1",
+		"@typescript-eslint/parser": "^8.29.1",
+		"eslint": "^9.24.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.6",
+		"globals": "^16.0.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.3",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.29.1"
+	},
+	"optionalDependencies": {
+		"bufferutil": "^4.0.9"
+	}
 }

@@ -1,10 +1,6 @@
 {
-	"watch": [
-	  "src"
-	],
+	"watch": ["src"],
 	"ext": "js,cjs,mjs,json",
-	"ignore": [
-	  "src/**/*.spec.js"
-	],
+	"ignore": ["src/**/*.spec.js"],
 	"exec": "node ./src/index.js"
-  }
+}
